@@ -6,19 +6,6 @@
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
@@ -26,7 +13,7 @@ body {
   font-size: 36px;
 }
 
-.wrapper {
+.item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,44 +23,76 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: relative;
+  background-size: cover;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
-.p1,
-.p2 {
-  display: none;
+.item1 {
+  height: 40px;
+  background-image: url("https://cdn.pixabay.com/photo/2022/03/16/04/08/koi-fish-7071556_960_720.jpg");
 }
 
-.show {
-  display: block;
-}
-
-.square {
-  margin: 20px;
-  width: 300px;
+.item2 {
   height: 300px;
-  background-color: gold;
+  background-image: url("https://cdn.pixabay.com/photo/2021/10/26/19/44/field-6745014_960_720.jpg");
+  background-position: center;
+}
+
+.hide {
+  height: 300px;
+}
+
+.arrow-rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
 }
 
 button {
-  padding: 20px 40px;
-  margin: 20px;
-  cursor: pointer;
+  margin: 0 30px;
+  padding: 10px 30px;
   background: none;
-  color: #fff;
-  font-size: 18px;
-  border: 3px solid #ddd;
-  border-radius: 8px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  text-transform: uppercase;
+  border: 2px solid #00cfff;
+  border-radius: 5px;
+  color: #00cfff;
+  font-size: 36px;
+  cursor: pointer;
+  -webkit-transition: color .3s, -webkit-box-shadow .3s;
+  transition: color .3s, -webkit-box-shadow .3s;
+  transition: color .3s, box-shadow .3s;
+  transition: color .3s, box-shadow .3s, -webkit-box-shadow .3s;
+  -webkit-box-shadow: 3px 3px 10px #00cfff;
+          box-shadow: 3px 3px 10px #00cfff;
 }
 
 button:hover {
-  background-color: #ddd;
-  color: #000;
+  color: #00ffae;
+  -webkit-box-shadow: 3px 3px 10px #00ffae;
+          box-shadow: 3px 3px 10px #00ffae;
+}
+
+.fas {
+  -webkit-transition: -webkit-transform .6s;
+  transition: -webkit-transform .6s;
+  transition: transform .6s;
+  transition: transform .6s, -webkit-transform .6s;
 }
 /*# sourceMappingURL=main.css.map */
