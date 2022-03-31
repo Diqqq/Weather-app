@@ -1,16 +1,30 @@
-const img1 = document.querySelector('.item1')
-const btn = document.querySelector('.arrow')
-const arrow = document.querySelector('.fas')
+const pass = document.querySelector('#password');
+const p = document.querySelector('.passinfo');
+const letters = /[a-z]/i;
+const numbers = /[0-9]/;
+const special = /[!@#$%^&*()]/;
+const minValue = 10;
 
-
-const showImg = () => {
-    img1.classList.toggle('hide')
-
-	if (img1.classList.contains('hide')) {
-		arrow.style.transform = 'rotate(180deg)'
-	} else {
-		arrow.style.transform = 'rotate(0)'
-	}
+const showMsg = () => {
+    if(pass.value.length >= minValue && pass.value.match(letters) && pass.value.match(numbers) && pass.value.match(special)) {
+        p.textContent = 'Masz bardzo dobre hasło 💪'
+        p.style.color = 'lime'
+    } else if (pass.value.length >= minValue && pass.value.match(letters) && pass.value.match(numbers)) {
+        p.textContent = 'Masz silne hasło 👌'
+        p.style.color = 'gold'
+    } else {
+        p.textContent = 'Masz słabe hasło 👎'
+        p.style.color = 'tomato'
+    }
 }
 
-btn.addEventListener('click', showImg)
+const checkPassword = () => {
+    if(pass.value !== '') {
+        showMsg()
+    } else {
+        p.textContent = 'Nie podałeś hasła...'
+        p.style.color = ''
+    }
+}
+
+pass.addEventListener('keyup', checkPassword)
