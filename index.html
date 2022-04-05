@@ -9,21 +9,36 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b8ec94cc5c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
 
-    <label for="converter">Konwerter <span class="one">°C</span> na <span class="two">°F</span></label>
-    <input type="number" id="converter" placeholder="Wpisz liczbę...">
-    <p class="result"></p>
+    <div class="todo">
+        <div class="header">
+            <h1>ToDo List</h1>
+            <input type="text" class="todo-input" placeholder="Wpisz treść zadania...">
+            <button class="btn-add">Add</button>
+        </div>
+        <div class="todolist">
+            <h3>Lista zadań:</h3>
+            <p class="error-info">Brak zadań na liście</p>
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
 
-    <div>
-        <button class="conv">Konwertuj</button>
-        <button class="reset">Reset</button>
-        <button class="change">Zamień</button>
+    <div class="popup">
+        <h3>Edytuj zadanie:</h3>
+        <div class="popup-body">
+            <p class="popup-info"></p>
+            <input type="text" class="popup-input" placeholder="Wprowadź nową treść zadania...">
+            <button class="popup-btn accept">Zatwierdź</button>
+            <button class="popup-btn cancel">Anuluj</button>
+        </div>
     </div>
 
     <script src="./js/main.js"></script>
