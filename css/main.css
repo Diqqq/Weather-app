@@ -59,7 +59,7 @@ input::placeholder {
 }
 
 button {
-  padding: 10px;
+  padding: 10px 20px;
   margin-left: 20px;
   color: #fff;
   font-weight: bold;
@@ -68,8 +68,8 @@ button {
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transition: background-color .3s, color .3s;
-  transition: background-color .3s, color .3s;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
@@ -145,5 +145,184 @@ button:hover {
   margin-top: 10px;
   font-size: 14px;
   color: tomato;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-image: linear-gradient(315deg, #c2118d 0%, #ff503c 74%);
+    font-size: 12px;
+  }
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+  }
+  h3 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  input {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid #ddd;
+  }
+  input::-webkit-input-placeholder {
+    text-align: center;
+    color: #ddd;
+    font-family: 'Montserrat', sans-serif;
+  }
+  input:-ms-input-placeholder {
+    text-align: center;
+    color: #ddd;
+    font-family: 'Montserrat', sans-serif;
+  }
+  input::-ms-input-placeholder {
+    text-align: center;
+    color: #ddd;
+    font-family: 'Montserrat', sans-serif;
+  }
+  input::placeholder {
+    text-align: center;
+    color: #ddd;
+    font-family: 'Montserrat', sans-serif;
+  }
+  button {
+    position: absolute;
+    top: 99%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin-left: 0;
+    font-size: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  button:hover {
+    color: #333;
+    background-color: #ddd;
+  }
+  .wrapper {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    padding: 5% 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
+    border-radius: 25px;
+  }
+  .main-info {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 200px;
+  }
+  .city-name {
+    font-size: 20px;
+  }
+  .weather-info {
+    margin-bottom: 40px;
+  }
+  .weather-info p {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    font-size: 16px;
+    text-align: center;
+  }
+  .weather {
+    top: 20%;
+  }
+  .temperature {
+    top: 50%;
+  }
+  .humidity {
+    top: 82%;
+  }
+  .bottom {
+    position: relative;
+    height: 50%;
+    margin-top: 15%;
+    border-top: 2px solid #fff;
+  }
+  .headings {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border: none;
+  }
+  .headings p {
+    position: absolute;
+    width: 100%;
+  }
+  .heading_weather {
+    top: 10%;
+  }
+  .heading_temp {
+    top: 39%;
+  }
+  .heading_hum {
+    top: 70%;
+  }
+  .weather-info {
+    height: 65%;
+    font-size: 26px;
+  }
+  .photo {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .warning {
+    margin-top: 250px;
+    font-size: 10px;
+    color: tomato;
+  }
 }
 /*# sourceMappingURL=main.css.map */
