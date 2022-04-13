@@ -42,6 +42,7 @@ button {
     color: #fff;
     font-weight: bold;
     background: none;
+    border: 1px solid #ddd;
     border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;
@@ -61,9 +62,9 @@ button:hover {
     border-radius: 25px;
 }
 
-.top {
-    height: 260px;
-}
+// .top {
+//     height: 260px;
+// }
 
 .bottom {
     height: 140px;
