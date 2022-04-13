@@ -32,6 +32,10 @@ const getWeather = () => {
 			temperature.textContent = Math.floor(temp) + `°C`
 			humidity.textContent = hum + `%`
 
+
+// console.log(res.data.wind.speed); // dorobic prędkość wiatru
+
+
 			if (weather.textContent === 'Clear') {
 				weather.textContent = 'Czyste niebo'
 			} else if (weather.textContent === 'Clouds') {
@@ -76,5 +80,6 @@ const enterKeyCheck = e => {
 		getWeather()
 	}
 }
+
 input.addEventListener('keyup', enterKeyCheck)
 button.addEventListener('click', getWeather)
